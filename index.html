@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AltFlex Capstone Methodology Design | AI-Powered Forensic Framework</title>
+    <meta name="description" content="AltFlex - AI-Powered Forensic Framework for Web3 DeFi Protocol Security. Capstone Project Methodology Design using Agile Scrum.">
+    <meta name="keywords" content="AltFlex, AI, Blockchain, DeFi, Security, Forensics, Capstone, Agile Scrum">
+    <meta name="author" content="Jay Arre P. Talosig">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Mermaid for diagrams -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'base', 
+            themeVariables: { 
+                primaryColor: '#6366F1', 
+                primaryTextColor: '#fff', 
+                primaryBorderColor: '#4F46E5', 
+                lineColor: '#8B5CF6', 
+                secondaryColor: '#10B981', 
+                tertiaryColor: '#EC4899',
+                background: '#1E1B4B',
+                fontFamily: 'Inter, sans-serif'
+            } 
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🔐</span>
+                <span class="logo-text">AltFlex</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#overview" class="nav-link">Overview</a></li>
+                <li><a href="#methodology" class="nav-link">Methodology</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX" target="_blank" class="nav-link nav-cta">
+                    <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-content animate__animated animate__fadeInUp">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                Capstone Project 2025-2026
+            </div>
+            <h1 class="hero-title">
+                <span class="gradient-text">AltFlex</span>
+                <span class="subtitle">AI-Powered Forensic Framework</span>
+            </h1>
+            <p class="hero-description">
+                Exploit Detection Framework for Web3 DeFi Protocols
+            </p>
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-icon">📚</span>
+                    <span>CCSFEN2L</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">👩‍🏫</span>
+                    <span>Prof. Armida Salazar</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">📅</span>
+                    <span>Nov 2025 - Feb 2026</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#overview" class="btn btn-primary">
+                    Explore Project
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX" target="_blank" class="btn btn-secondary">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="window-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="window-title">altflex_detector.py</span>
+                </div>
+                <pre class="window-code"><code><span class="keyword">class</span> <span class="class">AnomalyDetector</span>:
+    <span class="keyword">def</span> <span class="function">detect_flash_loan</span>(self, tx):
+        <span class="comment"># ML-powered detection</span>
+        features = self.extract(tx)
+        risk_score = self.model.predict(features)
+        <span class="keyword">return</span> {
+            <span class="string">"is_anomaly"</span>: risk_score > <span class="number">0.85</span>,
+            <span class="string">"confidence"</span>: <span class="number">100</span>%
+        }</code></pre>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Project Overview Section -->
+        <section class="section" id="overview">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">Project Overview</h2>
+                    <p class="section-subtitle">Revolutionizing blockchain security with AI-powered forensics</p>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="overview-card glass-card">
+                        <div class="card-icon">🎯</div>
+                        <h3>Scope</h3>
+                        <p>AltFlex is an integrated AI and digital forensics framework designed to proactively detect and analyze security exploits in cross-chain bridges and DeFi protocols. The system combines machine learning anomaly detection with blockchain forensic analysis to provide comprehensive security solutions for the Web3 ecosystem.</p>
+                    </div>
+
+                    <div class="overview-card glass-card">
+                        <div class="card-icon">⚡</div>
+                        <h3>Complexity Assessment</h3>
+                        <ul class="feature-list">
+                            <li><span class="highlight">Technical Complexity:</span> High (AI/ML, Blockchain, Full-stack)</li>
+                            <li><span class="highlight">Architecture:</span> Microservices (FastAPI + Next.js)</li>
+                            <li><span class="highlight">Data:</span> Real-world exploit datasets, smart contracts</li>
+                            <li><span class="highlight">Integrations:</span> Etherscan API, XGBoost ML</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Deliverables Timeline -->
+                <div class="deliverables-grid">
+                    <h3 class="subsection-title">Expected Deliverables</h3>
+                    <div class="deliverable-cards">
+                        <div class="deliverable-card phase-1">
+                            <div class="phase-badge">Phase 1</div>
+                            <div class="phase-status completed">✅ Completed</div>
+                            <h4>Flash Loan Detection</h4>
+                            <p>ML anomaly detection system</p>
+                            <span class="phase-date">Nov 17 - Dec 31, 2025</span>
+                        </div>
+                        <div class="deliverable-card phase-2">
+                            <div class="phase-badge">Phase 2</div>
+                            <div class="phase-status completed">✅ Completed</div>
+                            <h4>Address Verification</h4>
+                            <p>5-layer security pipeline</p>
+                            <span class="phase-date">Jan 1 - Jan 31, 2026</span>
+                        </div>
+                        <div class="deliverable-card phase-3">
+                            <div class="phase-badge">Phase 3</div>
+                            <div class="phase-status completed">✅ Completed</div>
+                            <h4>Premium Frontend</h4>
+                            <p>Enterprise-grade Next.js UI</p>
+                            <span class="phase-date">Feb 1 - Feb 19, 2026</span>
+                        </div>
+                        <div class="deliverable-card phase-final">
+                            <div class="phase-badge">Final</div>
+                            <div class="phase-status upcoming">📦 2027</div>
+                            <h4>Production Release</h4>
+                            <p>Complete security framework</p>
+                            <span class="phase-date">Next Year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section class="section section-dark" id="methodology">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">Agile Scrum Methodology</h2>
+                    <p class="section-subtitle">Why iterative development is essential for this project</p>
+                </div>
+
+                <div class="methodology-content">
+                    <div class="rationale-grid">
+                        <div class="rationale-card">
+                            <div class="rationale-number">01</div>
+                            <h4>Iterative Development Required</h4>
+                            <ul>
+                                <li>AI/ML models need continuous refinement based on test results</li>
+                                <li>Frontend UI requires iterative design improvements</li>
+                                <li>Security features demand rapid response to vulnerabilities</li>
+                            </ul>
+                        </div>
+                        <div class="rationale-card">
+                            <div class="rationale-number">02</div>
+                            <h4>Complex, Evolving Requirements</h4>
+                            <ul>
+                                <li>Blockchain security landscape changes rapidly</li>
+                                <li>New exploit patterns emerge requiring quick adaptation</li>
+                                <li>External API integrations may require adjustments</li>
+                            </ul>
+                        </div>
+                        <div class="rationale-card">
+                            <div class="rationale-number">03</div>
+                            <h4>Cross-Functional Skillsets</h4>
+                            <ul>
+                                <li>Backend development (Python, FastAPI)</li>
+                                <li>Frontend development (TypeScript, Next.js)</li>
+                                <li>Machine Learning (XGBoost, Feature Engineering)</li>
+                                <li>Security Engineering (Rate limiting, Auth)</li>
+                            </ul>
+                        </div>
+                        <div class="rationale-card">
+                            <div class="rationale-number">04</div>
+                            <h4>Demonstrable Progress</h4>
+                            <ul>
+                                <li>Working increments every 2 weeks for stakeholders</li>
+                                <li>Sprint reviews provide accountability</li>
+                                <li>GitHub discussions enable transparent collaboration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="comparison-box glass-card">
+                        <h4>Why Not Waterfall?</h4>
+                        <div class="comparison-grid">
+                            <div class="comparison-item negative">
+                                <span class="icon">❌</span>
+                                <span>ML model accuracy unknown upfront</span>
+                            </div>
+                            <div class="comparison-item negative">
+                                <span class="icon">❌</span>
+                                <span>Cannot predict all security requirements at start</span>
+                            </div>
+                            <div class="comparison-item positive">
+                                <span class="icon">✅</span>
+                                <span>Agile allows pivoting when exploit patterns change</span>
+                            </div>
+                            <div class="comparison-item positive">
+                                <span class="icon">✅</span>
+                                <span>Continuous testing catches security flaws early</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sprint Structure Section -->
+        <section class="section" id="timeline">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">Project Timeline & Sprints</h2>
+                    <p class="section-subtitle">10 sprints delivering 182 story points</p>
+                </div>
+
+                <!-- Phase Tabs -->
+                <div class="phase-tabs">
+                    <button class="phase-tab active" data-phase="phase1">
+                        <span class="tab-icon">🔵</span>
+                        Phase 1: Foundation
+                    </button>
+                    <button class="phase-tab" data-phase="phase2">
+                        <span class="tab-icon">🟢</span>
+                        Phase 2: Security
+                    </button>
+                    <button class="phase-tab" data-phase="phase3">
+                        <span class="tab-icon">🟣</span>
+                        Phase 3: Frontend
+                    </button>
+                </div>
+
+                <!-- Phase Content -->
+                <div class="phase-content">
+                    <div class="phase-panel active" id="phase1">
+                        <h3 class="phase-title">Phase 1: Foundation & Core Detection</h3>
+                        <p class="phase-date-range">November 17 - December 31, 2025</p>
+                        
+                        <div class="sprint-grid">
+                            <div class="sprint-card">
+                                <div class="sprint-header">
+                                    <span class="sprint-badge">Sprint 1</span>
+                                    <span class="sprint-weeks">Week 1-2</span>
+                                </div>
+                                <h4>Data Collection & Preparation</h4>
+                                <ul class="sprint-tasks">
+                                    <li>Etherscan API integration</li>
+                                    <li>Dataset creation (5 real exploits, 50 transactions)</li>
+                                </ul>
+                                <div class="sprint-deliverable">
+                                    <code>📁 data/</code> directory with validated exploit samples
+                                </div>
+                            </div>
+                            
+                            <div class="sprint-card">
+                                <div class="sprint-header">
+                                    <span class="sprint-badge">Sprint 2</span>
+                                    <span class="sprint-weeks">Week 2-3</span>
+                                </div>
+                                <h4>ML Model Development</h4>
+                                <ul class="sprint-tasks">
+                                    <li>XGBoost classifier training</li>
+                                    <li>Feature engineering (22 features)</li>
+                                </ul>
+                                <div class="sprint-deliverable">
+                                    <code>🤖 AnomalyDetector</code> with 100% validation accuracy
+                                </div>
+                            </div>
+                            
+                            <div class="sprint-card">
+                                <div class="sprint-header">
+                                    <span class="sprint-badge">Sprint 3</span>
+                                    <span class="sprint-weeks">Week 3-4</span>
+                                </div>
+                                <h4>Rule Engine & API</h4>
+                                <ul class="sprint-tasks">
+                                    <li>6 flash loan detection rules</li>
+                                    <li>FastAPI endpoint implementation</li>
+                                </ul>
+                                <div class="sprint-deliverable">
+                                    <code>🌐 12 REST API</code> endpoints with Swagger docs
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phase-panel" id="phase2">
+                        <h3 class="phase-title">Phase 2: Security Enhancement</h3>
+                        <p class="phase-date-range">January 1 - January 31, 2026</p>
+                        
+                        <div class="sprint-grid">
+                            <div class="sprint-card">
+                                <div class="sprint-header">
+                                    <span class="sprint-badge">Sprint 4</span>
+                                    <span class="sprint-weeks">Week 5-6</span>
+                                </div>
+                                <h4>Address Validation</h4>
+                                <ul class="sprint-tasks">
+                                    <li>5-layer verification pipeline</li>
+                                    <li>Format, checksum, ICAP, on-chain, behavioral</li>
+                                </ul>
+                                <div class="sprint-deliverable">
+                                    <code>🔐 AddressVerifier</code> module with external APIs
+                                </div>
+                            </div>
+                            
+                            <div class="sprint-card">
+                                <div class="sprint-header">
+                                    <span class="sprint-badge">Sprint 5</span>
+                                    <span class="sprint-weeks">Week 6-7</span>
+                                </div>
+                                <h4>Behavioral Analysis</h4>
+                                <ul class="sprint-tasks">
+                                    <li>Velocity scoring & funding pattern analysis</li>
+                                    <li>Blacklist integration</li>
+                                </ul>
+                                <div class="sprint-deliverable">
+                                    <code>📊 BehavioralAnalyzer</code> with OFAC/mixer detection
+                                </div>
+                            </div>
+                            
+                            <div class="sprint-card">
+                                <div class="sprint-header">
+                                    <span class="sprint-badge">Sprint 6</span>
+                                    <span class="sprint-weeks">Week 7-8</span>
+                                </div>
+                                <h4>API Hardening</h4>
+                                <ul class="sprint-tasks">
+                                    <li>Rate limiting & API key auth</li>
+                                    <li>Request validation & audit logging</li>
+                                </ul>
+                                <div class="sprint-deliverable">
+                                    <code>🛡️ SecurityMiddleware</code> with 100 req/min limit
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phase-panel" id="phase3">
+                        <h3 class="phase-title">Phase 3: Premium Frontend</h3>
+                        <p class="phase-date-range">February 1 - February 19, 2026</p>
+                        
+                        <div class="sprint-grid">
+                            <div class="sprint-card">
+                                <div class="sprint-header">
+                                    <span class="sprint-badge">Sprint 7</span>
+                                    <span class="sprint-weeks">Days 1-2</span>
+                                </div>
+                                <h4>Landing & Dashboard</h4>
+                                <ul class="sprint-tasks">
+                                    <li>Next.js 14 setup, Tailwind CSS theme</li>
+                                    <li>Landing page with animations</li>
+                                </ul>
+                                <div class="sprint-deliverable">
+                                    <code>🎨 Responsive</code> landing + dashboard layout
+                                </div>
+                            </div>
+                            
+                            <div class="sprint-card">
+                                <div class="sprint-header">
+                                    <span class="sprint-badge">Sprint 8</span>
+                                    <span class="sprint-weeks">Days 3-4</span>
+                                </div>
+                                <h4>Transaction Analysis UI</h4>
+                                <ul class="sprint-tasks">
+                                    <li>Transaction input form</li>
+                                    <li>Risk score visualization</li>
+                                </ul>
+                                <div class="sprint-deliverable">
+                                    <code>📈 /dashboard/analyze</code> with ML integration
+                                </div>
+                            </div>
+                            
+                            <div class="sprint-card">
+                                <div class="sprint-header">
+                                    <span class="sprint-badge">Sprint 9</span>
+                                    <span class="sprint-weeks">Days 5-6</span>
+                                </div>
+                                <h4>Verification & Exploit UI</h4>
+                                <ul class="sprint-tasks">
+                                    <li>Address verification interface</li>
+                                    <li>Exploit database browser</li>
+                                </ul>
+                                <div class="sprint-deliverable">
+                                    <code>🔍 /verify</code> and <code>/exploits</code> pages
+                                </div>
+                            </div>
+
+                            <div class="sprint-card">
+                                <div class="sprint-header">
+                                    <span class="sprint-badge">Sprint 10</span>
+                                    <span class="sprint-weeks">Days 7-8</span>
+                                </div>
+                                <h4>UI Polish & Deployment</h4>
+                                <ul class="sprint-tasks">
+                                    <li>1900px max-width optimization</li>
+                                    <li>Documentation update</li>
+                                </ul>
+                                <div class="sprint-deliverable">
+                                    <code>🚀 Production-ready</code> codebase on GitHub
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Velocity Stats -->
+                <div class="velocity-section glass-card">
+                    <h3>Sprint Velocity & Performance</h3>
+                    <div class="velocity-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">182</span>
+                            <span class="stat-label">Story Points Delivered</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Completion Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">18-22</span>
+                            <span class="stat-label">Points per Sprint</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">10</span>
+                            <span class="stat-label">Total Sprints</span>
+                        </div>
+                    </div>
+                    
+                    <div class="velocity-chart">
+                        <div class="chart-bar" style="--height: 100%;"><span>20</span></div>
+                        <div class="chart-bar" style="--height: 90%;"><span>18</span></div>
+                        <div class="chart-bar" style="--height: 100%;"><span>22</span></div>
+                        <div class="chart-bar" style="--height: 100%;"><span>20</span></div>
+                        <div class="chart-bar" style="--height: 86%;"><span>19</span></div>
+                        <div class="chart-bar" style="--height: 95%;"><span>21</span></div>
+                        <div class="chart-bar" style="--height: 68%;"><span>15</span></div>
+                        <div class="chart-bar" style="--height: 73%;"><span>16</span></div>
+                        <div class="chart-bar" style="--height: 77%;"><span>17</span></div>
+                        <div class="chart-bar" style="--height: 64%;"><span>14</span></div>
+                    </div>
+                    <div class="chart-labels">
+                        <span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span>
+                        <span>S6</span><span>S7</span><span>S8</span><span>S9</span><span>S10</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section section-dark" id="team">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">Team & Roles</h2>
+                    <p class="section-subtitle">A cross-functional team driving innovation</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card lead">
+                        <div class="team-avatar">
+                            <span>👨‍💻</span>
+                        </div>
+                        <h4>Jay Arre P. Talosig</h4>
+                        <span class="team-role">Technical Lead & Backend Developer</span>
+                        <ul class="team-responsibilities">
+                            <li>Overall architecture design & decision-making</li>
+                            <li>Backend API development (FastAPI)</li>
+                            <li>ML model training & feature engineering</li>
+                            <li>Code reviews & GitHub management</li>
+                            <li>Sprint planning & backlog prioritization</li>
+                        </ul>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <span>🎨</span>
+                        </div>
+                        <h4>Alexander Castilo, Mark Jhoshua Taberna</h4>
+                        <span class="team-role">COM231 - Frontend Developer</span>
+                        <ul class="team-responsibilities">
+                            <li>Next.js frontend implementation</li>
+                            <li>UI/UX design & responsiveness testing</li>
+                            <li>Component library development</li>
+                            <li>API client integration</li>
+                            <li>Browser compatibility & QA</li>
+                        </ul>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <span>🧪</span>
+                        </div>
+                        <h4>Nicko Nehcterg Dalida, Rinoah Venedict Dela Rama</h4>
+                        <span class="team-role">COM232 - QA Engineer & Data Analyst</span>
+                        <ul class="team-responsibilities">
+                            <li>Test suite development (pytest)</li>
+                            <li>Exploit dataset curation & validation</li>
+                            <li>Performance testing & security audits</li>
+                            <li>Documentation writing</li>
+                            <li>Sprint retrospectives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Scrum Ceremonies -->
+                <div class="ceremonies-section">
+                    <h3 class="subsection-title">Scrum Ceremonies</h3>
+                    <div class="ceremonies-grid">
+                        <div class="ceremony-card">
+                            <div class="ceremony-icon">📅</div>
+                            <h4>Daily Standups</h4>
+                            <p>Async via GitHub Discussions</p>
+                            <span class="ceremony-duration">15 min posts</span>
+                        </div>
+                        <div class="ceremony-card">
+                            <div class="ceremony-icon">📋</div>
+                            <h4>Sprint Planning</h4>
+                            <p>Start of each 2-week sprint</p>
+                            <span class="ceremony-duration">1-2 hours</span>
+                        </div>
+                        <div class="ceremony-card">
+                            <div class="ceremony-icon">🎬</div>
+                            <h4>Sprint Review</h4>
+                            <p>Demo working features</p>
+                            <span class="ceremony-duration">30-45 min</span>
+                        </div>
+                        <div class="ceremony-card">
+                            <div class="ceremony-icon">🔄</div>
+                            <h4>Sprint Retrospective</h4>
+                            <p>Continuous improvement</p>
+                            <span class="ceremony-duration">30 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section class="section" id="architecture">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2 class="section-title">Technical Architecture</h2>
+                    <p class="section-subtitle">Production-ready microservices design</p>
+                </div>
+
+                <!-- Architecture Diagram -->
+                <div class="architecture-diagram glass-card">
+                    <div class="mermaid">
+                        flowchart LR
+                        subgraph Data["📊 Data Layer"]
+                        A[Etherscan API] --> B[EtherscanCollector]
+                        C[Sample Data] --> D[data/]
+                        end
+
+                        subgraph Processing["⚙️ Processing"]
+                        B --> E[FeatureEngineer]
+                        D --> E
+                        E --> F[AnomalyDetector]
+                        E --> G[ExploitDetector]
+                        E --> H[BehavioralAnalyzer]
+                        end
+
+                        subgraph API["🌐 API Layer"]
+                        F --> I[FastAPI :8000]
+                        G --> I
+                        H --> I
+                        end
+
+                        subgraph Frontend["🖥️ Frontend"]
+                        I --> J[Next.js :3000]
+                        J --> K[Landing Page]
+                        J --> L[Transaction Analysis]
+                        J --> M[Address Verification]
+                        J --> N[Exploit Database]
+                        end
+
+                        style I fill:#6366F1,stroke:#4F46E5,color:#fff
+                        style J fill:#10B981,stroke:#059669,color:#fff
+                    </div>
+                </div>
+
+                <!-- Flow Diagram -->
+                <div class="flow-diagram glass-card">
+                    <h3>Project Flow Diagram</h3>
+                    <div class="mermaid">
+                        graph TB
+                        subgraph P1["Phase 1: Foundation"]
+                        A[Sprint 1: Data Collection] --> B[Sprint 2: ML Training]
+                        B --> C[Sprint 3: API Development]
+                        end
+
+                        subgraph P2["Phase 2: Security"]
+                        C --> D[Sprint 4: Address Validation]
+                        D --> E[Sprint 5: Behavioral Analysis]
+                        E --> F[Sprint 6: API Hardening]
+                        end
+
+                        subgraph P3["Phase 3: Frontend"]
+                        F --> G[Sprint 7: Landing & Dashboard]
+                        G --> H[Sprint 8: Analysis UI]
+                        H --> I[Sprint 9: Verification & Exploit UI]
+                        I --> J[Sprint 10: Polish & Deploy]
+                        end
+
+                        J --> K[Final Submission]
+
+                        style A fill:#6366F1,stroke:#4F46E5,color:#fff
+                        style B fill:#6366F1,stroke:#4F46E5,color:#fff
+                        style C fill:#6366F1,stroke:#4F46E5,color:#fff
+                        style D fill:#10B981,stroke:#059669,color:#fff
+                        style E fill:#10B981,stroke:#059669,color:#fff
+                        style F fill:#10B981,stroke:#059669,color:#fff
+                        style G fill:#8B5CF6,stroke:#6D28D9,color:#fff
+                        style H fill:#8B5CF6,stroke:#6D28D9,color:#fff
+                        style I fill:#8B5CF6,stroke:#6D28D9,color:#fff
+                        style J fill:#8B5CF6,stroke:#6D28D9,color:#fff
+                        style K fill:#F59E0B,stroke:#D97706,color:#fff
+                    </div>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="tech-stack">
+                    <h3 class="subsection-title">Development Tools</h3>
+                    <div class="stack-grid">
+                        <div class="stack-category">
+                            <h4>Backend Stack</h4>
+                            <div class="stack-items">
+                                <span class="stack-item">Python 3.10+</span>
+                                <span class="stack-item">FastAPI</span>
+                                <span class="stack-item">Uvicorn</span>
+                                <span class="stack-item">XGBoost</span>
+                                <span class="stack-item">scikit-learn</span>
+                                <span class="stack-item">NumPy</span>
+                                <span class="stack-item">Pandas</span>
+                                <span class="stack-item">pytest</span>
+                            </div>
+                        </div>
+                        <div class="stack-category">
+                            <h4>Frontend Stack</h4>
+                            <div class="stack-items">
+                                <span class="stack-item">Next.js 14</span>
+                                <span class="stack-item">TypeScript</span>
+                                <span class="stack-item">Tailwind CSS 4</span>
+                                <span class="stack-item">Framer Motion</span>
+                                <span class="stack-item">Lucide React</span>
+                            </div>
+                        </div>
+                        <div class="stack-category">
+                            <h4>DevOps</h4>
+                            <div class="stack-items">
+                                <span class="stack-item">Git</span>
+                                <span class="stack-item">GitHub</span>
+                                <span class="stack-item">Virtual Env</span>
+                                <span class="stack-item">npm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section class="section section-dark" id="tools">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">06</span>
+                    <h2 class="section-title">Tools & Artifacts</h2>
+                    <p class="section-subtitle">Project management and quality assurance</p>
+                </div>
+
+                <div class="tools-grid">
+                    <div class="tool-card glass-card">
+                        <div class="tool-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </div>
+                        <h4>GitHub Repository</h4>
+                        <p>Version control, code hosting, issue tracking</p>
+                        <a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX" target="_blank" class="tool-link">View Repository →</a>
+                    </div>
+
+                    <div class="tool-card glass-card">
+                        <div class="tool-icon">💬</div>
+                        <h4>GitHub Discussions</h4>
+                        <p>Async standups, sprint planning notes</p>
+                        <a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX/discussions" target="_blank" class="tool-link">View Discussions →</a>
+                    </div>
+
+                    <div class="tool-card glass-card">
+                        <div class="tool-icon">📋</div>
+                        <h4>GitHub Projects</h4>
+                        <p>Kanban board for sprint backlog</p>
+                        <a href="https://github.com/users/flexycode/projects/9" target="_blank" class="tool-link">View Board →</a>
+                    </div>
+
+                    <div class="tool-card glass-card">
+                        <div class="tool-icon">📝</div>
+                        <h4>Documentation</h4>
+                        <p>README, CODE_REVIEW, specifications</p>
+                        <a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX/tree/main/docs" target="_blank" class="tool-link">View Docs →</a>
+                    </div>
+                </div>
+
+                <!-- Definition of Done -->
+                <div class="dod-section glass-card">
+                    <h3>Definition of Done (DoD)</h3>
+                    <div class="dod-grid">
+                        <div class="dod-item">
+                            <span class="dod-check">✅</span>
+                            <span>Code peer-reviewed and merged to <code>main</code></span>
+                        </div>
+                        <div class="dod-item">
+                            <span class="dod-check">✅</span>
+                            <span>Unit tests written and passing (pytest)</span>
+                        </div>
+                        <div class="dod-item">
+                            <span class="dod-check">✅</span>
+                            <span>Documentation updated (README, CODE_REVIEW)</span>
+                        </div>
+                        <div class="dod-item">
+                            <span class="dod-check">✅</span>
+                            <span>Feature manually tested in browser/API</span>
+                        </div>
+                        <div class="dod-item">
+                            <span class="dod-check">✅</span>
+                            <span>No critical security vulnerabilities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Management Section -->
+        <section class="section" id="risks">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">07</span>
+                    <h2 class="section-title">Risk Management</h2>
+                    <p class="section-subtitle">Identified risks and mitigation strategies</p>
+                </div>
+
+                <div class="risk-table-wrapper glass-card">
+                    <table class="risk-table">
+                        <thead>
+                            <tr>
+                                <th>Risk</th>
+                                <th>Probability</th>
+                                <th>Impact</th>
+                                <th>Mitigation Strategy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="risk-icon">🌐</span>
+                                    External API downtime (Etherscan)
+                                </td>
+                                <td><span class="risk-badge medium">Medium</span></td>
+                                <td><span class="risk-badge high">High</span></td>
+                                <td>Implement caching, fallback to sample data, retry logic</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="risk-icon">🤖</span>
+                                    ML model low accuracy
+                                </td>
+                                <td><span class="risk-badge medium">Medium</span></td>
+                                <td><span class="risk-badge high">High</span></td>
+                                <td>Iterative feature engineering, cross-validation, ensemble methods</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="risk-icon">📱</span>
+                                    UI responsiveness issues
+                                </td>
+                                <td><span class="risk-badge low">Low</span></td>
+                                <td><span class="risk-badge medium">Medium</span></td>
+                                <td>Test on multiple screen sizes, use Tailwind responsive utilities</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="risk-icon">📈</span>
+                                    Scope creep
+                                </td>
+                                <td><span class="risk-badge high">High</span></td>
+                                <td><span class="risk-badge medium">Medium</span></td>
+                                <td>Strict sprint goals, "nice-to-have" vs "must-have" prioritization</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="risk-icon">👥</span>
+                                    Team member unavailability
+                                </td>
+                                <td><span class="risk-badge medium">Medium</span></td>
+                                <td><span class="risk-badge medium">Medium</span></td>
+                                <td>Documentation-first culture, cross-training on stack components</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- QA Strategy -->
+                <div class="qa-section">
+                    <h3 class="subsection-title">Quality Assurance Strategy</h3>
+                    <div class="qa-pyramid">
+                        <div class="pyramid-level unit">
+                            <span class="level-count">159</span>
+                            <span class="level-label">Unit Tests (pytest)</span>
+                        </div>
+                        <div class="pyramid-level integration">
+                            <span class="level-count">API</span>
+                            <span class="level-label">Integration Tests</span>
+                        </div>
+                        <div class="pyramid-level manual">
+                            <span class="level-count">UI</span>
+                            <span class="level-label">Manual Testing</span>
+                        </div>
+                        <div class="pyramid-level security">
+                            <span class="level-count">🔒</span>
+                            <span class="level-label">Security Audits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Criteria Section -->
+        <section class="section section-dark" id="success">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">08</span>
+                    <h2 class="section-title">Success Criteria</h2>
+                    <p class="section-subtitle">Measurable outcomes across all phases</p>
+                </div>
+
+                <div class="success-grid">
+                    <div class="success-card phase-1-bg">
+                        <h4>Phase 1 Metrics</h4>
+                        <span class="success-status">✅ Achieved</span>
+                        <ul>
+                            <li>✅ 6 flash loan detection rules implemented</li>
+                            <li>✅ ML classifier with 100% validation accuracy</li>
+                            <li>✅ 12 REST API endpoints functional</li>
+                            <li>✅ 23 unit tests passing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="success-card phase-2-bg">
+                        <h4>Phase 2 Metrics</h4>
+                        <span class="success-status">✅ Achieved</span>
+                        <ul>
+                            <li>✅ 5-layer address verification operational</li>
+                            <li>✅ Behavioral analysis (velocity, funding)</li>
+                            <li>✅ API security: rate limiting, auth, validation</li>
+                            <li>✅ 123 additional tests (146 total)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="success-card phase-3-bg">
+                        <h4>Phase 3 Metrics</h4>
+                        <span class="success-status">✅ Achieved</span>
+                        <ul>
+                            <li>✅ Premium Next.js UI with 5 pages</li>
+                            <li>✅ Responsive design (1080px-1920px)</li>
+                            <li>✅ Real-time health monitoring</li>
+                            <li>✅ 1900px max-width optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section class="section" id="references">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">09</span>
+                    <h2 class="section-title">Reference Links</h2>
+                    <p class="section-subtitle">Project resources and documentation</p>
+                </div>
+
+                <div class="references-grid">
+                    <a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX" target="_blank" class="reference-card glass-card">
+                        <div class="ref-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </div>
+                        <div class="ref-content">
+                            <h4>AltFlex GitHub Repository</h4>
+                            <p>Main codebase hosting version control, issue tracking, and project documentation</p>
+                        </div>
+                        <span class="ref-arrow">→</span>
+                    </a>
+
+                    <a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX/discussions" target="_blank" class="reference-card glass-card">
+                        <div class="ref-icon">💬</div>
+                        <div class="ref-content">
+                            <h4>Agile Scrum Sprint Discussions</h4>
+                            <p>Async standup updates, sprint planning notes, and team collaboration</p>
+                        </div>
+                        <span class="ref-arrow">→</span>
+                    </a>
+
+                    <a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX/blob/main/docs/CODE_REVIEW_PHASE2_ADDRESS_SECURITY.md" target="_blank" class="reference-card glass-card">
+                        <div class="ref-icon">🔍</div>
+                        <div class="ref-content">
+                            <h4>Phase 2 Development Code Review</h4>
+                            <p>Detailed technical review of address verification and security enhancements</p>
+                        </div>
+                        <span class="ref-arrow">→</span>
+                    </a>
+
+                    <a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX/blob/main/docs/CAPSTONE_METHODOLOGY_DESIGN.md" target="_blank" class="reference-card glass-card">
+                        <div class="ref-icon">📋</div>
+                        <div class="ref-content">
+                            <h4>Capstone Methodology Design</h4>
+                            <p>Methodology design document for the AltFlex capstone project</p>
+                        </div>
+                        <span class="ref-arrow">→</span>
+                    </a>
+
+                    <a href="https://github.com/users/flexycode/projects/9" target="_blank" class="reference-card glass-card">
+                        <div class="ref-icon">📊</div>
+                        <div class="ref-content">
+                            <h4>AltFlex Sprint Planning & Task Board</h4>
+                            <p>Interactive sprint backlog and task tracking board for Agile Scrum workflow management</p>
+                        </div>
+                        <span class="ref-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="section section-gradient" id="conclusion">
+            <div class="container">
+                <div class="conclusion-content">
+                    <h2>Conclusion</h2>
+                    <p class="conclusion-text">
+                        The Agile Scrum methodology has proven highly effective for the AltFlex capstone project. 
+                        The iterative approach allowed for rapid adaptation to emerging blockchain security requirements, 
+                        continuous stakeholder feedback integration, and demonstrable progress through working increments every 2 weeks.
+                    </p>
+                    
+                    <div class="success-factors">
+                        <h3>Key Success Factors</h3>
+                        <div class="factors-grid">
+                            <div class="factor-item">
+                                <span class="factor-icon">🔄</span>
+                                <div>
+                                    <strong>Flexibility</strong>
+                                    <p>Pivoted from Streamlit to Next.js based on design requirements</p>
+                                </div>
+                            </div>
+                            <div class="factor-item">
+                                <span class="factor-icon">👁️</span>
+                                <div>
+                                    <strong>Transparency</strong>
+                                    <p>GitHub-based workflow provides full visibility to instructor</p>
+                                </div>
+                            </div>
+                            <div class="factor-item">
+                                <span class="factor-icon">✅</span>
+                                <div>
+                                    <strong>Quality</strong>
+                                    <p>100% test pass rate maintained across all sprints</p>
+                                </div>
+                            </div>
+                            <div class="factor-item">
+                                <span class="factor-icon">🤝</span>
+                                <div>
+                                    <strong>Collaboration</strong>
+                                    <p>Async communication via Discussions enables flexible teamwork</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="conclusion-final">
+                        The project successfully delivered a <strong>production-ready AI-powered forensic framework</strong> 
+                        through disciplined sprint execution, comprehensive testing, and continuous integration practices.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🔐</span>
+                    <span class="logo-text">AltFlex</span>
+                    <p>AI-Powered Forensic Framework for Web3 Security</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Project</h4>
+                        <a href="#overview">Overview</a>
+                        <a href="#methodology">Methodology</a>
+                        <a href="#timeline">Timeline</a>
+                        <a href="#architecture">Architecture</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX" target="_blank">GitHub</a>
+                        <a href="https://github.com/flexycode/CCSFEN2L_ALTFLEX/discussions" target="_blank">Discussions</a>
+                        <a href="https://github.com/users/flexycode/projects/9" target="_blank">Project Board</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025-2026 AltFlex Capstone Project | Computer Science Software Engineering 2 (CCSFEN2L)</p>
+                <p class="footer-credit">Designed with 💜 for Professor Armida Salazar</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
